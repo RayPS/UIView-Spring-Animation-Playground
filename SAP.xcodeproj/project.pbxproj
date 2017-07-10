@@ -12,6 +12,7 @@
 		71B07DE11F13788C001DDA4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B07DDF1F13788C001DDA4C /* Main.storyboard */; };
 		71B07DE31F13788C001DDA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B07DE21F13788C001DDA4C /* Assets.xcassets */; };
 		71B07DE61F13788C001DDA4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B07DE41F13788C001DDA4C /* LaunchScreen.storyboard */; };
+		71B07DEE1F13A5E0001DDA4C /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B07DED1F13A5E0001DDA4C /* Haptic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		71B07DE21F13788C001DDA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71B07DE51F13788C001DDA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71B07DE71F13788C001DDA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71B07DED1F13A5E0001DDA4C /* Haptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				71B07DDB1F13788C001DDA4C /* AppDelegate.swift */,
 				71B07DDD1F13788C001DDA4C /* ViewController.swift */,
+				71B07DED1F13A5E0001DDA4C /* Haptic.swift */,
 				71B07DDF1F13788C001DDA4C /* Main.storyboard */,
 				71B07DE21F13788C001DDA4C /* Assets.xcassets */,
 				71B07DE41F13788C001DDA4C /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B07DEE1F13A5E0001DDA4C /* Haptic.swift in Sources */,
 				71B07DDE1F13788C001DDA4C /* ViewController.swift in Sources */,
 				71B07DDC1F13788C001DDA4C /* AppDelegate.swift in Sources */,
 			);
@@ -266,9 +270,10 @@
 				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = SAP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rayps.SAP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayps.SAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -279,9 +284,10 @@
 				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = SAP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rayps.SAP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayps.SAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
