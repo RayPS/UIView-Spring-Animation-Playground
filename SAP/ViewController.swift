@@ -96,15 +96,21 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func sliderDidTouch(_ sender: Any) {
+    @IBAction func sliderEditingDidEnd(_ sender: UISlider) {
+        sender.setValue(sender.value.round1f, animated: true)
+        performAnimation()
+    }
+
+    @IBAction func viewTapGestureDidRecognized(_ sender: UITapGestureRecognizer) {
         performAnimation()
     }
 
 
 
 
+
     @IBAction func moreButtonDidTouch(_ sender: UIButton) {
-        let menu = UIAlertController(title: nil, message: "Pro Tip:\nThe best animation duration is less than 1s.\nThe Velocity is always better to be zero.\nCopy code with Universal Clipboard enabled.", preferredStyle: .actionSheet)
+        let menu = UIAlertController(title: nil, message: "Pro Tip:\nThe best animation duration is within 1s.\nThe Velocity better kept at zero.\nCopy code with Universal Clipboard enabled.", preferredStyle: .actionSheet)
         let aboutAction = UIAlertAction(title: "About", style: .default) { (action) in
             UIApplication.shared.open(URL(string: "http://rayps.com")!, options: [:], completionHandler: nil)
         }
@@ -117,6 +123,7 @@ class ViewController: UIViewController {
         let durationAction = UIAlertAction(title: (durationSlider.maximumValue ==  1 ? "Extend" : "Shorten") + " Max Duration", style: .default) { (action) in
             self.durationSlider.maximumValue = (self.durationSlider.maximumValue == 1 ? 10 : 1)
             self.updateValueLabels()
+            self.updateCodeLabel()
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -135,13 +142,21 @@ class ViewController: UIViewController {
 
         present(menu, animated: true)
     }
+
+    
 }
+
 
 extension Float {
     var string1f: String {
         return String(format: "%.1f", self)
     }
+
+    var round1f: Float {
+        return NSString(format: "%.1f", self).floatValue
+    }
 }
+
 
 extension String{
     static func randomEmoji()->String{

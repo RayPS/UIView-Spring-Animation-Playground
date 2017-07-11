@@ -41,7 +41,8 @@
                                                 <rect key="frame" x="78" y="0.0" width="211" height="33"/>
                                                 <connections>
                                                     <action selector="sliderDidSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="wgF-eG-Igv"/>
-                                                    <action selector="sliderDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gn-wT-zO0"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="5GJ-BT-ULY"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpY-9u-tsR"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AXg-S8-O7y" userLabel="Duration Value">
@@ -71,7 +72,8 @@
                                                 <rect key="frame" x="78" y="0.0" width="211" height="33"/>
                                                 <connections>
                                                     <action selector="sliderDidSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="PWm-Lv-wVa"/>
-                                                    <action selector="sliderDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBH-mK-hgJ"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Mum-dQ-D3D"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acd-2O-92b"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fd3-Cn-6W9" userLabel="Damping Value">
@@ -94,11 +96,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Wc-gUA" userLabel="Velocity Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Wc-gUA" userLabel="Velocity Slider">
                                                 <rect key="frame" x="78" y="0.0" width="211" height="33"/>
                                                 <connections>
                                                     <action selector="sliderDidSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lat-T7-VtU"/>
-                                                    <action selector="sliderDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSj-ye-FRm"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="HPG-A7-12h"/>
+                                                    <action selector="sliderEditingDidEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5j-Et-KjX"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y95-9w-fni" userLabel="Velocity Value">
@@ -268,7 +271,7 @@ Spring Animation Playground</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="7eP-n2-95H">
                     <connections>
-                        <action selector="sliderDidTouch:" destination="BYZ-38-t0r" id="6bF-jD-a7D"/>
+                        <action selector="viewTapGestureDidRecognized:" destination="BYZ-38-t0r" id="uh7-4C-MGE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
